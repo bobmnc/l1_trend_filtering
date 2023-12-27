@@ -29,13 +29,14 @@ def m_focuss(signal : np.ndarray,penalty :float,n_iter :int = 20):
     
     return X
 
-signal_test = create_multivariate_signals(N =1,signal_length=1000,
+if __name__=='__main__':
+    signal_test = create_multivariate_signals(N =1,signal_length=1000,
 
-                                D =5, 
-                                max_slope=0.01,
-                                p_trend_change =0.2,
-                                noise_level=0.1,shift =100)
+                                    D =5, 
+                                    max_slope=0.01,
+                                    p_trend_change =0.2,
+                                    noise_level=0.1,shift =100)
 
-filtered = m_focuss(signal_test[0],penalty=1)
-np.save('./data/signals_test_multivariate.npy',signal_test)
-np.save('./data/filtered_signals_test_multivariate.npy',filtered)
+    filtered = m_focuss(signal_test[0],penalty=1)
+    np.save('./data/signals_test_multivariate.npy',signal_test)
+    np.save('./data/filtered_signals_test_multivariate.npy',filtered)
