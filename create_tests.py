@@ -34,9 +34,9 @@ def create_multivariate_signals(N : int,signal_length : int,
     first_signal = create_signals(N,signal_length,max_slope,
                                   p_trend_change,noise_level)
     for k in range(D):
-        signals[:,:,k] = np.roll(first_signal,axis=1,
+        signals[:,k,:] = np.roll(first_signal,axis=1,
                                  shift=shift*k)
-    
+    signals = np.transpose(signals,(0,2,1))
     return signals
 
 
