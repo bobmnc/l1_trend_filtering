@@ -11,12 +11,12 @@ TODO :
 
 J’ai quelques questions/pistes d’amélioration :
 - il y a plusieurs algos implémentés. Lequel correspond à celui de l’article ?
-    L'algorithme décrit dans l'article est TODO
+    **L'algorithme décrit dans l'article est TODO**
 - est-ce que ça marche pour des signaux multivariés ?
-    Oui, voir TODO
+    **Oui, voir TODO**
 - il faut afficher les ruptures sur les plots que vous montrer, pour voir s’il y a beaucoup ou non.
-    TODO avec le package ruptures
+    **TODO avec le package ruptures**
 - y a-t-il une heuristique pour choisir la pénalité ?
-    Pas pour le moment, l'article n'évoque pas d'heuristique pour ce choix.
+    **Pas pour le moment, l'article n'évoque pas d'heuristique pour ce choix.**
 - est-il possible d’implémenter le trend filtering en utilisant que des librairies simples (Numpy, scipy, scikit-learn, etc.) ?
-    Oui, nous avons seulement utilisé numpy, cvxpy et scipy
+    **Oui, nous avons seulement utilisé numpy, cvxpy et scipy**
