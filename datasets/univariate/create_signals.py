@@ -3,6 +3,8 @@ import numpy as np
 def create_signals(N : int,signal_length : int,max_slope : float,p_trend_change : float,noise_level:float):
     '''create N signals of size signal_length that have linear trend 
     and changes trend every 1/(1-p) in mean
+
+    outputs the generated signal and the breakpoints
     '''
     signals =  np.zeros((N,signal_length))
     ## moments where we change the slope
@@ -17,4 +19,6 @@ def create_signals(N : int,signal_length : int,max_slope : float,p_trend_change 
             else:
                 slope = (np.random.random()-.5)*2*max_slope
                 signals[k,j] = signals[k,j-1]+slope
-    return signals
+    breakpoints = np.where(change_slope)
+    breakpoints = np.append(breakpoints, signal_length)
+    return signals, breakpoints
