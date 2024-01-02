@@ -1,11 +1,16 @@
 import numpy as np
 
 
-def create_signals(N : int,signal_length : int,max_slope : float,p_trend_change : float,noise_level:float):
-    '''create N signals of size signal_length that have linear trend 
-    and changes trend every 1/(1-p) in mean
+def create_signals(N : int,signal_length : int, max_slope : float,p_trend_change : float,noise_level:float):
+    '''
+    Creates N signals of size signal_length that have linear trend 
+    and changes trend every 1/(1-p) in mean. Each time index has a 
+    p_trend_change probability of being a breakpoint where the trend
+    will take a new random value between [-max_slope, max_slope]. 
+    We however impose that the breakpoints can't be too close to each
+    other to avoid very short regime switches.
 
-    outputs the generated signal and the breakpoints
+    It outputs the generated signal and the breakpoints
     '''
     signals =  np.zeros((N,signal_length))
     breakpoints_list = []
@@ -36,6 +41,10 @@ def create_signals(N : int,signal_length : int,max_slope : float,p_trend_change 
 
 
 def remove_close_true(arr, min_distance=2):
+    """
+    Auxiliary function for create_signals that removes breakpoints that are too
+    close to each other to avoid very short regime switches.
+    """
     N = arr.shape[0]
     for row in range(N):
         indices_true = np.where(arr[row])[0]
