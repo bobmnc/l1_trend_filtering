@@ -2,9 +2,9 @@ import numpy as np
 from scipy.linalg import toeplitz
 import cvxpy as cp
 import scipy
+from utils.get_heuristic_lambda import get_heuristic_lambda
 
-
-def l1_trend_filter(signal, penalty):
+def l1_trend_filter(signal, penalty = None):
     '''
     Compute univariate L1 trend filtering as done in
       https://web.stanford.edu/~gorin/papers/l1_trend_filter.pdf
@@ -18,6 +18,9 @@ def l1_trend_filter(signal, penalty):
     Returns :
         - filtered (array) : ndarray representing the filtered signal
     '''
+    if penalty == None:
+      penalty = get_heuristic_lambda(signal)
+
     n = len(signal)
     x = cp.Variable(n)
     row = np.zeros(n)
