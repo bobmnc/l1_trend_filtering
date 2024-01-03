@@ -8,8 +8,7 @@ def create_multivariate_signals(
     D: int,
     max_slope: float,
     p_trend_change: float,
-    noise_level: float,
-    shift: int = 50):
+    noise_level: float):
     """create N signals (D dimensional) of size signal_length that have linear trend
     and changes trend every 1/(1-p) in mean,
     the dim every signal is D
