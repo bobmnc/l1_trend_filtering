@@ -66,12 +66,14 @@ Number of breakpoints :  4
 ![output1](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/d67a45cd-7221-4146-ab61-9e0240fbf332)
 
 
+**See more examples in the demo notebook : demo.ipynb**
+
+
 **Execution time** of filters.univariate.l1_trend_filter with respect to the length of the signal :
 
 ![time_execution](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/69fd24d1-1495-4db0-b5c5-947d1a6f311a)
 
 
-See more examples in the demo notebook : demo.ipynb
 
 
 **FAQ :**
