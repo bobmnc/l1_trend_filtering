@@ -134,14 +134,14 @@ def l1_filtering_spatial(img : np.ndarray, penalty : float):
     prob.solve(solver = cp.CLARABEL)
     return X.value
 
-if __name__=='__main__':
-    A_ = compute_matrix_A(4)
-    X = np.random.randn(10,10)
+# if __name__=='__main__':
+#     A_ = compute_matrix_A(4)
+#     X = np.random.randn(10,10)
 
-    test = l1_filtering_spatial(X)
-    print('test',test)
+#     test = l1_filtering_spatial(X)
+#     print('test',test)
 
-    #l1_trend_filter2(np.load('./data/signals_test.npy')[0],penalty=10) 
+#     #l1_trend_filter2(np.load('./data/signals_test.npy')[0],penalty=10) 
 
 
 
