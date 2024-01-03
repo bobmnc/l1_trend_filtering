@@ -88,14 +88,14 @@ Number of breakpoints :  4
 - Est-il possible de supprimer les ruptures associées à des changements de dérivé trop faible (seuillage) ? \
     **Oui nous avons fait ca dans la fonction utils.get_breakpoints.py**
 - il faut afficher les ruptures sur les plots que vous montrer, pour voir s’il y a beaucoup ou non. \
-    Examples de plots univariés :
+    **Examples de plots univariés** :
 ![example1](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/064c2a4a-fa71-4aaf-819f-51790378579a)
 ![example2](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/1761e111-c944-4f45-a85c-59f1ba89f2f9)
 ![example3](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/47419195-de9b-42e4-b359-89fb139e5705)
 ![example4](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/b5abf007-bd47-4954-a149-929561b9ef94)
 ![example5](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/107ac487-795d-41e3-a8e9-1b68e2580eee)
 
-Examples de plot multivarié pour un signal en dimension 5 :
+**Examples de plot multivarié** pour un signal en dimension 5 :
 ![multivariate](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/83f9f86c-d1ba-4fcd-b547-89449425f423)
 
 
