@@ -23,7 +23,6 @@ def l1_trend_filter2(signal,penalty):
     n = len(signal)
     theta = cp.Variable(n)
     mat_A = compute_matrix_A(n)
-    print(mat_A.shape)
     objective=  cp.Minimize(cp.sum_squares(mat_A@theta-signal)+2*penalty*cp.norm(theta[3:],1))
 
     prob =  cp.Problem(objective=objective)
