@@ -31,7 +31,7 @@ def create_signals(N : int,signal_length : int, max_slope : float,p_trend_change
             else:
                 # we make sure the new slope will be different enough from the old slope
                 potential_slope = (np.random.random()-.5)*2*max_slope
-                while np.abs(potential_slope - slope) / max_slope <= 0.33:
+                while np.abs(potential_slope - slope) / max_slope <= 0.5:
                     potential_slope = (np.random.random()-.5)*2*max_slope
                 slope = potential_slope
                 signals[k,j] = signals[k,j-1]+slope
