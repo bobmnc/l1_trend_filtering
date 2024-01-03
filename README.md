@@ -1,22 +1,36 @@
-# l1_trend_filtering
+___
 
-time-series project l1 trend filtering
+# l1 Trend Filtering
 
-TODO :
+MVA time-series course project l1 trend filtering with Charles Truong.
 
-- mettre dans des scripts à part les fonctions de visualisation, création de données, etc. 
-- chaque fichier python ne doit contenir qu’une seule méthode
-- donner les temps d’exécution pour plusieurs longueurs de signaux
-- faire un readme qui décrit les librairies à installer, comment lancer le code sur un exemple simple, les paramètres des fonctions.
+Original paper : https://web.stanford.edu/~boyd/papers/pdf/l1_trend_filter.pdf
 
-J’ai quelques questions/pistes d’amélioration :
-- il y a plusieurs algos implémentés. Lequel correspond à celui de l’article ?
-    **L'algorithme décrit dans l'article est TODO**
-- est-ce que ça marche pour des signaux multivariés ?
-    **Oui, voir TODO**
-- il faut afficher les ruptures sur les plots que vous montrer, pour voir s’il y a beaucoup ou non.
-    **TODO avec le package ruptures**
-- y a-t-il une heuristique pour choisir la pénalité ?
-    **Pas pour le moment, l'article n'évoque pas d'heuristique pour ce choix.**
-- est-il possible d’implémenter le trend filtering en utilisant que des librairies simples (Numpy, scipy, scikit-learn, etc.) ?
+Students : 
+
+- Baudouin de Monicault baudouin.de-monicault@polytechnique.edu
+
+- Thomas Li thomas.li9162@gmail.com
+
+___
+
+**Required libraries :** numpy, cvxpy and scipy
+
+**Simple examples :** see demo notebook : 
+
+
+
+**Execution time** of filters.univariate.l1_trend_filter with respect to the length of the signal :
+
+
+**FAQ :**
+- il y a plusieurs algos implémentés. Lequel correspond à celui de l’article ? \
+    **L'algorithme principal décrit dans l'article est filters.univariate.l1_trend_filter.py**
+- est-ce que ça marche pour des signaux multivariés ? \
+    **Oui, nous avons implémenté la version multivarié de l1_trend_filter décrit dans la section 7.5 du papier original dans filters.multivariate.l1_trend_filter_multivariate.py**
+- il faut afficher les ruptures sur les plots que vous montrer, pour voir s’il y a beaucoup ou non. \
+    **Voir les plots au dessus**
+- y a-t-il une heuristique pour choisir la pénalité ? \
+    **Nous avons crée une heuristique simple pour choisir la pénalité qui semble plutôt bien marcher sur nos examples dans utils.get_heuristic_lambda.py**
+- est-il possible d’implémenter le trend filtering en utilisant que des librairies simples (Numpy, scipy, scikit-learn, etc.) ? \
     **Oui, nous avons seulement utilisé numpy, cvxpy et scipy**
