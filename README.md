@@ -16,7 +16,11 @@ ___
 
 **Required libraries :** numpy, cvxpy and scipy
 
-**Simple examples :** see demo notebook : 
+**Simple examples :** 
+
+```
+print("hello")
+```
 
 
 
