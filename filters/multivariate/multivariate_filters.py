@@ -1,9 +1,8 @@
 import numpy as np
 from scipy.linalg import toeplitz
-from filter import compute_matrix_A
-from create_tests import create_multivariate_signals
+from filters.univariate.filter import compute_matrix_A
 from tqdm import tqdm
-from numba import jit
+
 ## formulation 1
 ## to do : numba compatible toeplitz
 #@jit(nopython=False)
@@ -31,6 +30,7 @@ def m_focuss(signal : np.ndarray,penalty :float,n_iter :int = 20):
     
     return X
 
+
 def m_focuss_A(signal : np.ndarray,penalty :float,n_iter :int = 20):
     n = signal.shape[0]
     dim = signal.shape[1]
@@ -56,15 +56,3 @@ def m_focuss_A(signal : np.ndarray,penalty :float,n_iter :int = 20):
         theta = filtered
     
     return A@theta
-
-if __name__=='__main__':
-    signal_test = create_multivariate_signals(N =1,signal_length=1000,
-
-                                    D =5, 
-                                    max_slope=0.01,
-                                    p_trend_change =0.2,
-                                    noise_level=0.1,shift =100)
-
-    filtered = m_focuss(signal_test[0],penalty=1)
-    np.save('./data/signals_test_multivariate.npy',signal_test)
-    np.save('./data/filtered_signals_test_multivariate.npy',filtered)
