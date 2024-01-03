@@ -60,7 +60,9 @@ plt.legend()
 plt.show()
 ```
 heuristic lambda : 37279.079811632226
+
 Number of breakpoints :  4
+
 ![output1](https://github.com/bobmnc/l1_trend_filtering/assets/96530384/d67a45cd-7221-4146-ab61-9e0240fbf332)
 
 
