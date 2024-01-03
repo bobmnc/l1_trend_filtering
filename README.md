@@ -42,14 +42,14 @@ signal = signals[0]
 bkps = breakpoints_list[0]
 
 # Heuristic to choose lambda value
-penalty = get_heuristic_lambda(signal)
+penalty = get_heuristic_lambda(signal) # a positive float
 print("heuristic lambda :", penalty)
 
 # get the trend from l1_trend_filtering
-trend_l1 = l1_trend_filter(signal, penalty = penalty)
+trend_l1 = l1_trend_filter(signal, penalty = penalty) # shape (signal_length,)
 
 # get the predicted breakpoints of the filtered trend
-pred_bkps = get_breakpoints(trend_l1)
+pred_bkps = get_breakpoints(trend_l1) # list of breakpoints
 print("Number of breakpoints : ", len(pred_bkps))
 
 # display the predicted changepoints and the trend
