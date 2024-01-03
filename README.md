@@ -14,7 +14,7 @@ Students :
 
 ___
 
-**Required libraries :** numpy, cvxpy and scipy
+**Required libraries :** numpy, cvxpy and scipy (and ruptures to display the results) 
 
 **Simple examples :** 
 
