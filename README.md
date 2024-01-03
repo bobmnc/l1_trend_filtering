@@ -87,3 +87,5 @@ Number of breakpoints :  4
     **Nous avons crée une heuristique simple pour choisir la pénalité qui semble plutôt bien marcher sur nos examples dans utils.get_heuristic_lambda.py**
 - est-il possible d’implémenter le trend filtering en utilisant que des librairies simples (Numpy, scipy, scikit-learn, etc.) ? \
     **Oui, nous avons seulement utilisé numpy, cvxpy et scipy**
+- Est-il possible de supprimer les ruptures associées à des changements de dérivé trop faible (seuillage) ? \
+    **Oui nous avons fait ca dans la fonction utils.get_breakpoints.py**
