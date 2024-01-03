@@ -48,6 +48,8 @@ def remove_close_true(arr, min_distance=2):
     N = arr.shape[0]
     for row in range(N):
         indices_true = np.where(arr[row])[0]
+        if len(indices_true) == 0:
+            return arr
         last_true_index = indices_true[0]
         
         for i in range(1, len(indices_true)):
