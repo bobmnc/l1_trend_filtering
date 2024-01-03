@@ -4,7 +4,7 @@ import cvxpy as cp
 import scipy
 
 
-def l1_trend_filter(signal,penalty):
+def l1_trend_filter(signal, penalty):
     '''
     Compute univariate L1 trend filtering as done in
       https://web.stanford.edu/~gorin/papers/l1_trend_filter.pdf
@@ -25,7 +25,7 @@ def l1_trend_filter(signal,penalty):
     col= np.zeros(n-2)
     col[0] = 1
     D = toeplitz(c=col,r=row)
-    objective=  cp.Minimize(cp.sum_squares(x-signal)+penalty*cp.norm(D@x,1))
+    objective=  cp.Minimize(cp.sum_squares(x-signal)+ 2*penalty*cp.norm(D@x,1))
     prob =  cp.Problem(objective=objective)
     prob.solve(solver = cp.CLARABEL)
     return x.value
