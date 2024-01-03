@@ -21,5 +21,5 @@ def get_heuristic_lambda(signal):
     to start with
     """
     trend = get_moving_average(signal, window_size = len(signal) // 5)
-    heuristic_lambda = 15 * get_reconstruction_error(trend, signal) / (2*get_Dx(trend))
+    heuristic_lambda = 20 * get_reconstruction_error(trend, signal) / (2*get_Dx(trend))
     return heuristic_lambda
