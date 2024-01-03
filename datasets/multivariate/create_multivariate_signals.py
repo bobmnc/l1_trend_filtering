@@ -30,5 +30,5 @@ def create_multivariate_signals(
         small_signal, small_bkps = create_signals(
             N, signal_length, max_slope, p_trend_change, noise_level
         )
-        signals[:, :, k] += 0.3 * small_signal
+        signals[:, :, k] += 0.5 * small_signal
     return signals, breakpoints_list
